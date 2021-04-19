@@ -21,7 +21,7 @@ class Category(models.Model):
         return reverse('category:single', kwargs={'slug': self.slug})
 
     class Meta:
-        ordering = ['name']
+        ordering = ['cat_name']
 
 
 
