@@ -14,7 +14,7 @@ class Category(models.Model):
         return self.cat_name
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.cat_name)
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
@@ -32,7 +32,7 @@ class Product(models.Model):
     quatity = models.PositiveIntegerField(null=True)
     price = models.PositiveIntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    product_cat = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)
+    product_cat = models.ForeignKey(Category, related_name='product', null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
