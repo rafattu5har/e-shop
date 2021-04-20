@@ -32,7 +32,7 @@ class Product(models.Model):
     quatity = models.PositiveIntegerField(null=True)
     price = models.PositiveIntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    product_cat = models.ForeignKey(Category, related_name='product', null=True, on_delete=models.CASCADE)
+    product_cat = models.ForeignKey(Category, related_name='product', blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
