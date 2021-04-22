@@ -1,0 +1,13 @@
+{% extends "category/category_base.html" %}
+
+{% block category_content %}
+
+  <div class="jumbotron">
+    {% for cat in category_list %}
+      <a href="#">
+        <h4 class="cat-name">{{ cat.cat_name }}</h4>
+      </a>
+    {% endfor %}
+  </div>
+
+{% endblock  %}
