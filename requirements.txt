@@ -160,7 +160,7 @@ traitlets=5.0.5=pyhd3eb1b0_0
 typed-ast=1.4.2=py38h2bbff1b_1
 typing_extensions=3.7.4.3=pyha847dfd_0
 ujson=4.0.2=py38hd77b12b_0
-urllib3=1.26.3=pyhd3eb1b0_0
+urllib3=1.26.4=pypi_0
 vc=14.2=h21ff451_1
 vs2015_runtime=14.27.29016=h5e58377_2
 watchdog=1.0.2=py38haa95532_1
