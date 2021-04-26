@@ -1,0 +1,17 @@
+{% extends 'product/product_base.html' %}
+
+{% block product_content %}
+
+    <div class='row'>
+        <div class='col-md-4'>
+            <h4>{{ product.name }}</h4>
+            <img src="{{ product.image.url }}" alt="" width="200" height="200">
+        </div>
+        <div class='col-md-6'>
+            <h5>In Stock: {{ product.quantity }}</h5>
+            <p>{{ product.pro_description }}</p>
+            <p><i><strong>Price: </strong>{{ product.price }}</i></p>
+        </div>
+    </div>
+
+{% endblock product_content %}
