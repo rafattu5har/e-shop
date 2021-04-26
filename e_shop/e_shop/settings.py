@@ -68,6 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'e_shop.context_processors.cat_list', # for category listing in all the pages with base.html
             ],
         },
     },
