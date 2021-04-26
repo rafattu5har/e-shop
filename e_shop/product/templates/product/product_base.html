@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="products-page">
+        <div class='container'>
+            {% block pre_product %}{% endblock pre_product %}
+            {% block product_content %}{% endblock product_content %}
+            {% block post_product %}{% endblock post_product %}
+        </div>
+    </div>
+    
+
+{% endblock content %}
