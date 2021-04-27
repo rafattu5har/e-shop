@@ -25,8 +25,8 @@
                 Categories
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                {% for cat in category_list %}
-                  <li><a class="dropdown-item" href="#">{{ cat.cat_name }}</a></li>
+                {% for category in category_list %}
+                  <li><a class="dropdown-item" href="{% url 'product:by_category' slug=category.slug %}">{{ category.cat_name }}</a></li>
                 {% endfor %}
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Specified Cats</a></li>
