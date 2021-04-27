@@ -18,3 +18,11 @@ class ProductDetail(generic.DetailView):
     # def get_queryset(self):
     #     queryset = super().get_queryset()
     #     return queryset.filter(pk=self.kwargs.get('pk'))
+
+
+class CategoryProduct(generic.ListView):
+    model = Product
+  
+    def get_queryset(self):
+      queryset = super().get_queryset()
+      return queryset.filter(product_cat__slug=self.kwargs.get('slug'))
