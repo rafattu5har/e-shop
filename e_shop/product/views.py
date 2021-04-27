@@ -9,6 +9,10 @@ from category.models import Category
 class ProductList(generic.ListView):
     model = Product
     template_name = 'product/product_list.html'
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.all().order_by('created_at')
 
 
 class ProductDetail(generic.DetailView):
