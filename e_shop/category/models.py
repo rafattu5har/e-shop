@@ -6,7 +6,7 @@ from django.urls import reverse
 
 class Category(models.Model):
     cat_name = models.CharField(max_length=255)
-    slug = models.SlugField(allow_unicode=True, unique=True)
+    slug = models.SlugField(allow_unicode=True, unique=True, blank=True)
     description = models.TextField(blank=True, default='')
     cat_created = models.DateTimeField(auto_now_add=True)
 
