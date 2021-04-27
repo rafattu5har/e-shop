@@ -25,4 +25,5 @@ app_name = 'product'
 urlpatterns = [
     path('', views.ProductList.as_view(), name='all'),
     url('(?P<pk>\d+)/$', views.ProductDetail.as_view(), name='single'),
+    url('by_cat/(?P<slug>[-\w]+)/$', views.CategoryProduct.as_view(), name='by_category'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
